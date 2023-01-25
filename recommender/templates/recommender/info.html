@@ -1,0 +1,40 @@
+{% extends 'recommender/dashboard.html' %}
+
+{% load static %}
+
+
+{% block maincontent %}
+
+<br><br>
+<div class="container">
+  <h2 class="text-center"><u>Similar Movies</u></h2><br>            
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr class = 'tablecell', style ='font-size: 25px;
+    text-align: center;'>
+        
+        <th>Plot</th>
+        <th>Movie name</th>
+        <th>Cosine sim score</th>
+        <th>Cover</th>
+      </tr>
+    </thead>
+    <tbody>
+    <!-- jinja2 Technique -->
+    {% if d %}  
+    {% for i in d %}
+      <tr>
+        <font size = 1><td style ='font-size: 15px;
+    text-align: justify;'>{{i.Plot}}</td></font>
+        <td>{{i.Title}}</td>
+        <td>{{i.Cosine}}</td>
+        <td><a href = {{i.Wiki_Page}}><img src = {{i.Cover}} alt="Image Not available" ></a></td>
+
+      </tr>
+    {% endfor %}
+    {% endif %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

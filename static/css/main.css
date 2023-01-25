@@ -1,0 +1,34 @@
+{% load static %}
+.colors{
+	background-color: #E8E8E8;
+}
+.input_field {
+    padding: 200px;0px;0px;0px;
+    color: white;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+
+     /* for adding an outline stroke to the text (experimental)*/
+     /* -webkit-text-stroke: 1px black;width and color */
+    
+
+    text-align: center;
+    font-size: 100px;
+    height: 150px;
+    background: url("../img/wallpaper.jpg") 50% 50% repeat;
+    background-color: #303030;
+    background-blend-mode: overlay;
+    animation:scroll 60s ease-in-out;
+    }
+
+@keyframes scroll {
+    0% {background-position:0 0;}
+    50% {background-position:0 100%;}
+    100%{background-position:0 0;}
+}
+
+.tablecell {
+    font-size: 100px;
+    text-align: center;
+}
